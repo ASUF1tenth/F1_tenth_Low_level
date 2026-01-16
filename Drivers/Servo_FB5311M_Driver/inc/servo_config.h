@@ -17,5 +17,7 @@
 #define INTEGRAL_WINDUP_GUARD  60.0f   // Integral windup guard
 #define ADC_RESOLUTION 4095.0f  // 12-bit ADC
 #define ADC_BUFFER_SIZE 16     // Size of the ADC buffer
+#define MAX_PWM_PULSE_WIDTH 2500  // Maximum PWM pulse width in microseconds
+#define MIN_PWM_PULSE_WIDTH 500   // Minimum PWM pulse width in microseconds
 
 #endif /* __SERVO_CONFIG_H */

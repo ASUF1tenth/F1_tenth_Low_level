@@ -23,8 +23,8 @@ float map_voltage_to_angle(float voltage, float min_angle, float max_angle)
 void setServoPulseWidth(uint16_t pulse_width)
 {
   // Safety Clamping
-  if (pulse_width < 500) pulse_width = 500;
-  if (pulse_width > 2500) pulse_width = 2500;
+  if (pulse_width < MIN_PWM_PULSE_WIDTH) pulse_width = MIN_PWM_PULSE_WIDTH;
+  if (pulse_width > MAX_PWM_PULSE_WIDTH) pulse_width = MAX_PWM_PULSE_WIDTH;
   // Update Timer Compare Register (Duty Cycle)
   __HAL_TIM_SET_COMPARE(&htim2, TIM_CHANNEL_1, pulse_width);
 }
